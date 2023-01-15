@@ -18,7 +18,6 @@ function GuestbookList({ isNeedToRefresh, toggleRefresh }: Props) {
         setLoading(true);
 
         const result = await getGuestbook();
-        console.log(result);
 
         setEntries(result.data as GuestbookEntry[]);
       } catch (error) {
