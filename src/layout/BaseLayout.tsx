@@ -6,7 +6,7 @@ interface Props {
 
 function BaseLayout({ children }: Props) {
   return (
-    <main className='bg-gradient-to-l from-slate-50 to-slate-100'>
+    <main className='bg-gradient-to-l from-slate-50 to-slate-100 relative'>
       {children}
     </main>
   )
