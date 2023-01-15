@@ -13,7 +13,7 @@ function AccountCard({ owner, accountNumber, bankLogoSrc, onClick }: Props) {
   return (
     <div
       onClick={handleClick}
-      className="flex flex-col justify-center gap-4 bg-slate-50 h-52 rounded-lg p-4 wavy-bg shadow hover:shadow-lg focus:shadow-lg  max-w-sm"
+      className="flex flex-col justify-center gap-4 bg-slate-50 h-52 rounded-lg p-4 wavy-bg shadow hover:shadow-lg focus:shadow-lg w-full max-w-sm"
     >
       <img src={bankLogoSrc} className="w-32" />
       <div>

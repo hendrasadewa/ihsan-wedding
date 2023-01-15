@@ -29,7 +29,7 @@ function GiftSection() {
   }, [isToastVisible, timeout]);
 
   return (
-    <section className="p-4 flex flex-col gap-6">
+    <section className="p-4 flex flex-col justify-center items-center gap-6">
       <header className="flex flex-col gap-2">
         <h2 className="text-center text-4xl font-cursive">
           Hadiah Kepada Pengantin
