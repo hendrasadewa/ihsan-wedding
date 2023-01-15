@@ -12,16 +12,6 @@ function BrideSection({ ...rest }: Props) {
       {...rest}
     >
       <header className="flex flex-col items-center gap-4">
-        <div className="flex flex-col items-center gap-2 shadow rounded p-4 bg-white">
-          <p>
-            وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُونَ
-          </p>
-          <p className="text-sm">
-            “Dan segala sesuatu Kami ciptakan berpasang-pasangan supaya kamu
-            mengingat kebesaran Allah.”{' '}
-          </p>
-          <p className="font-cursive">QS Az-Zariyat:49</p>
-        </div>
         <h3 className="text-4xl font-cursive">Pengantin</h3>
       </header>
 
@@ -36,6 +26,14 @@ function BrideSection({ ...rest }: Props) {
         name={wife.name}
         parent={wife.description}
       />
+      <div className="flex flex-col items-center gap-2 shadow rounded p-4 bg-white">
+        <p>وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُونَ</p>
+        <p className="text-sm">
+          “Dan segala sesuatu Kami ciptakan berpasang-pasangan supaya kamu
+          mengingat kebesaran Allah.”{' '}
+        </p>
+        <p className="font-cursive">QS Az-Zariyat:49</p>
+      </div>
     </section>
   );
 }
