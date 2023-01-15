@@ -3,7 +3,7 @@ interface Props {
   toggle: () => void;
 }
 
-function AudioPlayer({ isPlaying, toggle }: Props ) {
+function AudioPlayer({ isPlaying, toggle }: Props) {
   return (
     <button className="btn btn-xs btn-ghost" onClick={toggle}>
       {isPlaying ? (
@@ -18,7 +18,7 @@ function AudioPlayer({ isPlaying, toggle }: Props ) {
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M15.75 5.25v13.5m-7.5-13.5v13.5"
+            d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
       ) : (

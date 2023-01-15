@@ -13,7 +13,7 @@ function App() {
   const [isPlaying, musicToggle] = useAudio(
     '/music/Francisco_Alvear-Wedding_01.mp3'
   );
-  
+
   const [showControl, setShowControl] = useState<boolean>(false);
 
   const onOpenInvitation = () => {
@@ -30,17 +30,17 @@ function App() {
 
   return (
     <BaseLayout>
+      {showControl ? (
+        <div className="sticky top-0 z-30">
+          <AudioPlayer toggle={musicToggle} isPlaying={isPlaying} />
+        </div>
+      ) : null}
       <HeroSection onOpenInvitation={onOpenInvitation} />
       <BrideSection id="bride" />
       <CountdownSection />
       <LocationSection />
       <GiftSection />
       <GuestbookSection />
-      {showControl ? (
-        <div className="absolute top-0">
-          <AudioPlayer toggle={musicToggle} isPlaying={isPlaying} />
-        </div>
-      ) : null}
     </BaseLayout>
   );
 }
