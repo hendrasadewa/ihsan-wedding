@@ -6,7 +6,7 @@ interface Props {
 }
 
 function HeroSection({ onOpenInvitation }: Props) {
-  const title = 'Acara Pernikahan';
+  const title = 'Undangan Acara Pernikahan';
   const heading = `${BRIDES.husband.nickname} & ${BRIDES.wife.nickname}`;
   const date = dayjs(EVENT_TIME.covenant).format('DD MMMM YYYY');
 
@@ -19,8 +19,8 @@ function HeroSection({ onOpenInvitation }: Props) {
 
       <div className="text-center flex flex-col gap-6 items-center justify-between">
         <div className="flex flex-col items-center justify-center gap-6">
-          <h1 className="text-md">{title}</h1>
           <img src="/img/hero-image.png" className="rounded-full w-64" />
+          <p className="text-md">{title}</p>
           <h2 className="text-6xl font-cursive">{heading}</h2>
           <div className='flex flex-col gap-4'>
             <p className="text-lg font-mono">{date}</p>
