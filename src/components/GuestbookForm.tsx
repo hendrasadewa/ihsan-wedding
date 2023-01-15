@@ -61,7 +61,7 @@ function GuestbookForm({ onSubmit }: Props) {
         <label>Pesan</label>
         <textarea
           id="message"
-          className="textarea textarea-bordered w-full"
+          className="textarea textarea-bordered w-full h-32"
           disabled={isSubmitting}
           name="messageTextArea"
           placeholder="Sampaikan ucapan terbaik kepada kedua pengantin"

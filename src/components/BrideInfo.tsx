@@ -8,7 +8,7 @@ function BrideInfo({ name, avatarSrc, parent }: Props) {
   return (
     <div className="flex flex-col gap-4 items-center justify-center">
       <div className="avatar">
-        <div className="rounded-full w-40 border-2 border-spacing-2">
+        <div className="rounded-full w-40 shadow-md border-spacing-2">
           <img src={avatarSrc} />
         </div>
       </div>

@@ -27,20 +27,24 @@ function GuestbookSection() {
   return (
     <section
       id="Guestbook"
-      className="snap-center flex flex-col gap-4 rounded mx-2"
+      className="flex flex-col items-center gap-4 rounded max-w-lg m-auto"
     >
-      <img src="/img/couple.jpg" className="rounded-md shadow" />
+      <img src="/img/couple.jpg" className="rounded-full w-64" />
+
       <h2 className="capitalize text-center text-xl">
         Berikan ucapan terbaik untuk kedua mempelai
       </h2>
-      <div className="bg-white p-2 rounded-lg shadow">
+      <div className="p-2 w-full">
         <GuestbookForm onSubmit={handleSubmit} />
       </div>
       <h2 className="capitalize text-center text-xl">
         Ucapan terkirim kepada pengantin
       </h2>
-      <div className='mb-4 max-h-screen overflow-y-scroll'>
-        <GuestbookList isNeedToRefresh={false} toggleRefresh={toggleRefresh} />
+      <div className="mb-4 max-h-96 overflow-y-scroll w-full px-4">
+        <GuestbookList
+          isNeedToRefresh={isNeedToRefresh}
+          toggleRefresh={toggleRefresh}
+        />
       </div>
     </section>
   );

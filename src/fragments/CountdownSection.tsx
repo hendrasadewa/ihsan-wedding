@@ -12,9 +12,11 @@ function CountdownSection() {
   return (
     <section
       id="Countdown"
-      className="flex flex-col gap-12 justify-center items-center min-h-screen max-h-screen"
+      className="flex flex-col gap-12 justify-center items-center min-h-screen"
       style={{
         background: `url('/img/floral-potrait.png')`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
       }}
     >
       <div className="flex flex-col gap-4 bg-white bg-opacity-50 backdrop-blur p-4 rounded-lg">
