@@ -29,22 +29,31 @@ function GuestbookSection() {
       id="Guestbook"
       className="flex flex-col items-center gap-4 rounded max-w-lg m-auto"
     >
-      <img src="/img/couple.jpg" className="rounded-full w-64" />
-
-      <h2 className="capitalize text-center text-xl">
-        Berikan ucapan terbaik untuk kedua mempelai
+      <h2 className="text-4xl font-cursive">
+        Guestbook
       </h2>
-      <div className="p-2 w-full">
-        <GuestbookForm onSubmit={handleSubmit} />
+      <div className="px-2 rounded">
+        <header className="py-2 capitalize bg-neutral w-full rounded-t">
+          <h2 className="capitalize text-center text-xl text-slate-50">
+            Ucapan Kepada Pengantin
+          </h2>
+        </header>
+        <div className="mb-4 max-h-96 overflow-y-scroll w-full px-4 graph-paper-bg">
+          <GuestbookList
+            isNeedToRefresh={isNeedToRefresh}
+            toggleRefresh={toggleRefresh}
+          />
+        </div>
       </div>
-      <h2 className="capitalize text-center text-xl">
-        Ucapan terkirim kepada pengantin
-      </h2>
-      <div className="mb-4 max-h-96 overflow-y-scroll w-full px-4">
-        <GuestbookList
-          isNeedToRefresh={isNeedToRefresh}
-          toggleRefresh={toggleRefresh}
-        />
+      <div className="p-2 w-full">
+        <header className="py-2 capitalize bg-neutral w-full rounded-t">
+          <h2 className="capitalize text-center text-xl text-slate-50">
+            Kirim Ucapan
+          </h2>
+        </header>
+        <div className="w-full p-4 bg-white">
+          <GuestbookForm onSubmit={handleSubmit} />
+        </div>
       </div>
     </section>
   );
