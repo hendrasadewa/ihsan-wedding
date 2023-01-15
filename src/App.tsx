@@ -2,8 +2,10 @@ import { useRef, useState } from 'react';
 import AudioPlayer from './components/AudioPlayer';
 import BrideSection from './fragments/BrideSection';
 import CountdownSection from './fragments/CountdownSection';
+import GiftSection from './fragments/GiftSection';
 import GuestbookSection from './fragments/GuestbookSection';
 import HeroSection from './fragments/HeroSection';
+import LocationSection from './fragments/LocationSection';
 import useAudio from './hooks/useAudio';
 import BaseLayout from './layout/BaseLayout';
 
@@ -31,6 +33,8 @@ function App() {
       <HeroSection onOpenInvitation={onOpenInvitation} />
       <BrideSection id="bride" />
       <CountdownSection />
+      <LocationSection />
+      <GiftSection />
       <GuestbookSection />
       {showControl ? (
         <div className="absolute top-0">

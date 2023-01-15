@@ -10,6 +10,7 @@ function GoogleMapFrame({ allowFullScreen, src }: Props) {
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
       src={src}
+      className="w-full h-96"
     />
   );
 }

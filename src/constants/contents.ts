@@ -1,5 +1,4 @@
 import { AttendanceStatusEnum } from './enums';
-import { Brides } from './types';
 
 export const RSVP_COPY_FROM_ENUM: Record<AttendanceStatusEnum, string> = {
   isAttending: 'Menghadiri Acara',
@@ -38,6 +37,7 @@ export const BRIDES = {
 
 export const BANK = {
   owner: BRIDES.husband.name,
-  accountNumber: '',
+  instance: 'Mandiri',
+  accountNumber: '14 900 1247 1803',
   qrSrc: '/img/qris.png',
 };
