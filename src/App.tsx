@@ -14,33 +14,42 @@ function App() {
     '/music/Francisco_Alvear-Wedding_01.mp3'
   );
 
-  const [showControl, setShowControl] = useState<boolean>(false);
+  const [isInvitationOpen, setShowControl] = useState<boolean>(false);
 
   const onOpenInvitation = () => {
     if (!isPlaying) {
       musicToggle();
     }
-    const scrollTarget = document.getElementById('bride');
 
-    if (scrollTarget) {
-      scrollTarget.scrollIntoView({ behavior: 'smooth' });
-    }
     setShowControl(true);
+
+    setTimeout(() => {
+      const scrollTarget = document.getElementById('bride');
+  
+      if (scrollTarget) {
+        scrollTarget.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 2000)
+
   };
 
   return (
     <BaseLayout>
-      {showControl ? (
+      {isInvitationOpen ? (
         <div className="sticky top-0 z-30">
           <AudioPlayer toggle={musicToggle} isPlaying={isPlaying} />
         </div>
       ) : null}
       <HeroSection onOpenInvitation={onOpenInvitation} />
-      <BrideSection id="bride" />
-      <CountdownSection />
-      <LocationSection />
-      <GiftSection />
-      <GuestbookSection />
+      {isInvitationOpen ? (
+        <>
+          <BrideSection id="bride" />
+          <CountdownSection />
+          <LocationSection />
+          <GiftSection />
+          <GuestbookSection />
+        </>
+      ) : null}
     </BaseLayout>
   );
 }
